@@ -7,11 +7,14 @@ const Restaurants = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const proxyServer = "https://cors-anywhere.herokuapp.com/";
-      const swiggyApi =
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0748&lng=72.8856&is-seo-homepage-enabled=true";
+      // const proxyServer = "https://cors-anywhere.herokuapp.com/";
+      // const swiggyApi =
+      //   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0748&lng=72.8856&is-seo-homepage-enabled=true";
 
-      const response = await fetch(proxyServer + swiggyApi);
+      // const response = await fetch(proxyServer + swiggyApi);
+      const response = await fetch(
+        "https://swiggy-bakend.onrender.com/api/swiggy"
+      );
 
       const data = await response.json();
       setRestData(
